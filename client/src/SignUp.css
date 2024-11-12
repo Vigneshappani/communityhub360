@@ -1,0 +1,129 @@
+/* Base settings */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+/* Navbar styling */
+.na-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.thead {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Form container */
+.card {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Updated form title styling for "Sign up now" */
+.signup-title {
+  color: transparent; /* Needed for gradient text */
+  background-image: linear-gradient(45deg, #ff6ec4, #7873f5); /* Gradient colors */
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari compatibility */
+  font-size: 2.5em; /* Make it larger */
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+/* Input styling */
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #a777e3;
+  outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+  background-image: linear-gradient(to right, #6e8efb, #a777e3);
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-size: 1em;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* Link styling */
+.link-danger {
+  color: #b3c3fb; /* Lightened color for better visibility */
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.link-danger:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Adjust the form width for larger screens */
+.signup-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Keyframe animation for title */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .signup-title {
+    font-size: 2em; /* Slightly smaller on mobile */
+  }
+}
